@@ -34,6 +34,13 @@
         </div>
 
     </main>
+    <p id="name"></p>
+    <script>
+        (async function() {
+            const { text } = await( await fetch(`/api/add`)).json();
+            document.querySelector('#name').textContent = text;
+        }());
+        </script>
     <footer>
         <p>&copy; 2024 Valerie's Vroom Emporium</p>
     </footer>
