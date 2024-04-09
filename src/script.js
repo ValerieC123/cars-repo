@@ -27,6 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     });
 });
+
+function deleteButton()
+{
+    greetingsDelete();
+}
 function addCar(newCar) {
     fetch('http://localhost:3001/cars', {
         method: 'POST',

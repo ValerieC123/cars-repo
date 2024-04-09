@@ -35,21 +35,13 @@
         </div>
 
     </main>
-    <button type="trySubmit" onclick="greetingsDelete()" >Delete Button to check alert</button>
+    <button type="trySubmit" onclick="deleteButton()" >Delete Button to check alert</button>
         <script>
         (async function greetingsAdd() {
             const { text } = await( await fetch(`/api/add`)).json();
             // Showing the details of the car added as an alert
             alert(text);
         }());
-        /*(async function greetingsDelete() {
-            const { text } = await( await fetch(`/api/delete`)).json();
-            // Showing the details of the car added as an alert
-            alert(text);
-        }());*/
-
-        
-
         </script>
     <footer>
         <p>&copy; 2024 Valerie's Vroom Emporium</p>
