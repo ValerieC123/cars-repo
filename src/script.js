@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             })
             .catch(error => {
-                console.error('Error fetching car data:', error);
+                console.error('Error:', error);
             });
     });
 });
