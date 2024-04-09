@@ -2,6 +2,8 @@
 const express = require('express');
 const app = express();
 app.use(express.json());
+const PORT = process.env.PORT || 3001;
+
 
 const cars = require('./cars.json');
 
@@ -44,6 +46,7 @@ app.post('/cars', (req, res) => {
 });
 
 //start app at localhost:3001
-app.listen(3001, () => {
-    console.log('Server started at http://localhost:3001');
+app.listen(PORT, () => {
+    console.log(`Server started at http://localhost:${PORT}`);
+    
 });
