@@ -30,17 +30,19 @@
                 <input type="number" id="year" placeholder="Year" required>
                 <input type="text" id="color" placeholder="Color" required>
                 <input type="number" id="price" placeholder="Price" required>
-                <button type="submit">Add Car</button>
+                <button type="submit" >Add Car</button>
             </form>
         </div>
 
     </main>
     <p id="name"></p>
-    <script>
-        (async function() {
+        <script>
+        (async function greetings() {
             const { text } = await( await fetch(`/api/add`)).json();
-            document.querySelector('#name').textContent = text;
+            alert('#name');
         }());
+
+        
         </script>
     <footer>
         <p>&copy; 2024 Valerie's Vroom Emporium</p>
