@@ -35,18 +35,18 @@
         </div>
 
     </main>
-    <button type="trySubmit" onclick="greetingsDelete()" >Add Car</button>
+    <button type="trySubmit" onclick="greetingsDelete()" >Delete Button to check alert</button>
         <script>
         (async function greetingsAdd() {
             const { text } = await( await fetch(`/api/add`)).json();
             // Showing the details of the car added as an alert
             alert(text);
         }());
-        (async function greetingsDelete() {
+        /*(async function greetingsDelete() {
             const { text } = await( await fetch(`/api/delete`)).json();
             // Showing the details of the car added as an alert
             alert(text);
-        }());
+        }());*/
 
         
 
