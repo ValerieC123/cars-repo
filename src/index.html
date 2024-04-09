@@ -39,7 +39,8 @@
         <script>
         (async function greetings() {
             const { text } = await( await fetch(`/api/add`)).json();
-            alert('#name');
+            // Showing the details of the car added as an alert
+            alert(text);
         }());
 
         
