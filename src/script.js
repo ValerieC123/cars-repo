@@ -30,7 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function deleteButton()
 {
-    greetingsDelete();
+    (async function greetingsDelete() {
+        const { text } = await( await fetch(`/api/delete`)).json();
+        // Showing the details of the car added as an alert
+        return text;
+    }());
+    //greetingsDelete();
 }
 function addCar(newCar) {
     fetch('http://localhost:3001/cars', {
